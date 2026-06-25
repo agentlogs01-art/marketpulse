@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Environment / secrets -- never commit real credentials
+.env
+*.env.local
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Build artifacts from local docx generation work (see docs/)
+prd_work/
+*.bak
