@@ -7,3 +7,4 @@ feedparser>=6.0.10
 flask>=3.0.0
 gunicorn>=21.2.0
 werkzeug>=3.0.0   # ships with Flask; pinned explicitly for password hashing (persistence/subscriber_repo.py)
+-e .
