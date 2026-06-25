@@ -1,1 +1,1 @@
-web: gunicorn marketpulse.api.app:app
+web: PYTHONPATH=. gunicorn marketpulse.api.app:app
