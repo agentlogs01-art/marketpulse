@@ -16,3 +16,4 @@ __pycache__/
 # Build artifacts from local docx generation work (see docs/)
 prd_work/
 *.bak
+/marketpulse-india
