@@ -49,9 +49,9 @@ jobs:
           TELEGRAM_BOT_USERNAME: ${{ secrets.TELEGRAM_BOT_USERNAME }}
         run: |
           if [ -n "${{ github.event.inputs.prev_close }}" ]; then
-            python -m marketpulse.scheduler.run_daily_briefing --prev-close "${{ github.event.inputs.prev_close }}"
+            python -m scheduler.run_daily_briefing --prev-close "${{ github.event.inputs.prev_close }}"
           else
-            python -m marketpulse.scheduler.run_daily_briefing
+            python -m scheduler.run_daily_briefing
           fi
 
   record-close:
@@ -73,4 +73,4 @@ jobs:
           PYTHONPATH: .
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: python -m marketpulse.scheduler.record_daily_close
+        run: python scheduler/record_daily_close.py
