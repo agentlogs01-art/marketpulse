@@ -27,6 +27,21 @@ import os
 
 from flask import Flask, jsonify, request, send_from_directory
 
+import sys
+
+# Dynamic runtime layout correction
+_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_shortcut = os.path.join(_root, "marketpulse")
+
+if not os.path.exists(_shortcut):
+    try:
+        os.symlink(_root, _shortcut)
+    except Exception:
+        pass
+
+if _root not in sys.path:
+    sys.path.insert(0, _root)
+    
 from marketpulse.api.handlers import (
     AuthError,
     ValidationError,
