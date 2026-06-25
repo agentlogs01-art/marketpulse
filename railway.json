@@ -4,6 +4,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "gunicorn --env PYTHONPATH=/app api.app:app"
+    "startCommand": "env PYTHONPATH=/app gunicorn api.app:app"
   }
 }
