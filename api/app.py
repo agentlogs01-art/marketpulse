@@ -27,7 +27,18 @@ import os
 
 from flask import Flask, jsonify, request, send_from_directory
 
+' Testing Code
 
+import marketpulse_path_patch  # MUST BE LINE 1
+
+# ... your existing imports follow ...
+from marketpulse.api.handlers import (
+    AuthError,
+    ValidationError,
+    # ...
+)
+
+' Testin Code
     
 from marketpulse.api.handlers import (
     AuthError,
