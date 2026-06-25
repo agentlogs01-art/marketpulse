@@ -27,7 +27,7 @@ import os
 
 from flask import Flask, jsonify, request, send_from_directory
 
-' Testing Code
+# Testing Code
 
 import marketpulse_path_patch  # MUST BE LINE 1
 
@@ -38,7 +38,7 @@ from marketpulse.api.handlers import (
     # ...
 )
 
-' Testin Code
+# Testing Code
     
 from marketpulse.api.handlers import (
     AuthError,
